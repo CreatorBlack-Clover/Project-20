@@ -29,18 +29,18 @@ function draw()
 {
   background("black");  
   rectMode(CENTER);
-  contact(car,wall);
+  contact();
 
 
   drawSprites();
 }
 
-function contact(object1,object2)
+function contact()
 {
-  if(object1.x + object1.width/2 >= object2.x - object2.width/2 )
+  if(car.x + car.width/2 >= wall.x - wall.width/2 )
   {
-    object1.shapeColor = "green";
-    object1.velocityX = 0;
+    car.shapeColor = "green";
+    car.velocityX = 0;
   }
 
 }
